@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/style.css" />
+
+  <link rel="icon" type="image/x-icon" href="static/photos/logo2.png">
+
+  <script src="https://kit.fontawesome.com/76995abe43.js" crossorigin="anonymous"></script>
+
+  <title>Blue Expanding Sidebar</title>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <ul class="menu-list">
+        <li>
+          <div class="menu-container">
+            <button class="icon menu-icon" id="menu">
+              <!-- <img src="./assets/images/menu.svg" alt="menu" /> -->
+              <i class="fa-solid fa-bars fa-xl menu-icon"></i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <a href="#Summary & Transcript">
+            <button class="icon" id="search">
+            <!-- <img src="./assets/images/search.svg" alt="search" /> -->
+            <i class="fa-regular fa-pen-to-square fa-xl"></i>
+          </button>
+        </a>
+        </li>
+        <li>
+          <a href="#summary">
+            <button  class="icon" id="dashboard" >
+            <!-- <img src="./assets/images/grid.svg" alt="dashboard" /> -->
+            <i class="fa-regular fa-file-lines fa-xl"></i>
+          </button>
+        </a>
+        </li>
+        <li>
+          <a href="#something">
+          <button class="icon hidden" id="pets">
+            <!-- <img src="./assets/images/pet.svg" alt="pets" /> -->
+            <i class="fa-regular fa-clipboard fa-xl"></i>
+          </button>
+        </a>
+        </li>
+        <li>
+          <button class="icon hidden" id="clients">
+            <!-- <img src="./assets/images/user.svg" alt="clients" /> -->
+            <i class="fa-regular fa-note-sticky fa-xl"></i>
+          </button>
+        </li>
+        <li>
+          <button class="icon hidden" id="vets">
+            <!-- <img src="./assets/images/vet.svg" alt="vets" /> -->
+            <i class="fa-regular fa-calendar fa-xl"></i>
+          </button>
+        </li>
+        <li>
+          <button class="icon hidden" id="settings">
+            <!-- <img src="./assets/images/settings.svg" alt="settings" /> -->
+            <i class="fa-regular fa-folder fa-xl"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="logout-container">
+        <button class="icon-logout" onclick="window.location.href ='/';">
+          <i class="fa-solid fa-sign-out fa-rotate-180 fa-xl"></i>
+        </button>
+      </div>
+    </aside>   
+
+    <section class="main">
+      <section id="Summary & Transcript">
+        <div class="content">
+          <h1 style=" font-size: 40px;">Transcripts & Summary</h1>
+          <br>
+          <br>
+          {% if down %}
+          <P class="element1" id="element" onclick="disapper()">{{down}} ×</P>
+          {% else %}
+          <p> </p>
+          {% endif %}
+              {% for usdatas in usdata %}
+              <br>
+        <div class="zoom">   
+            <div  class="box-1">
+               <div class="container">
+                 <div class="right" style="background-color:#ffffff;">
+                  <h2 style="margin-left:0.7cm;">{{usdatas['Date'] }}</h2>
+                  <p  style="margin-left:0.7cm;padding-top: 0.3cm;"><b>Title</b>: {{usdatas['Title'] }} <b>  &nbsp; &nbsp; &nbsp;  File</b>:{{usdatas['filename']}}</p>
+                    <div class="r">
+                     <div class="c" >
+                       <img class="one" src="static/photos/people_logo.png" alt="Trulli" width="40" height="40" >
+                     </div>
+                     <div class="c">
+                       <p style="padding-top: 8px;">{{usdatas['Note']}}</p>
+                    </div>
+                    </div>
+                 </div>
+                 <div class="left" style="background-color:#eeeaff;">
+                  <h1>{{usdatas['duration']}}</h1>
+                 </div>
+               </div>
+               <div class="r1">
+                <div class="c1" id="button1">
+                  <form action="{{ url_for("page4")}}" method="post">
+                    <input type="hidden" name="fn1" value="{{usdatas['filename']}}" id="minput"/>
+                 <button class="view"
+                 onclick="this.parentNode.submit();" >
+                     View
+                 </button>
+                 </form>
+                   </div> 
+                <div class="c1" id="button2">
+                  <form action="{{ url_for("page3")}}" method="post">
+                    <input type="hidden" name="fn" value="{{usdatas['filename']}}" id="minput"/>
+                  <button class="download" 
+                 onclick="this.parentNode.submit();" >
+                 Download
+                  </button>
+                  </form>
+                   </div>
+             </div>
+            </div>
+        </div>
+              <br>   
+              <br>
+              <br>
+              {% endfor %}
+        </div>
+      </section>
+      <section id="summary">
+        <div class="content">
+          <h1 style="color: #ffffff;">Generate summary from Transcript</h1>
+
+          <!-- <div class="box-2"> -->
+            <form method="post" accept-charset="utf-8" >
+              <div class="row">
+                <div class="col-md-6 form-group ">
+                  <label  style="color: #ffffff;"><b>Enter your Transcript </b></label>
+                  <br>
+                  <!-- <input type="textarea" id="text" name="text" placeholder="Paste your Transcript here"> -->
+                  <textarea id="text" placeholder="Paste your Transcript here" style="width: 100%;height: 400px;"></textarea>
+                </div>
+                <div class="col-md-12 form-group">
+                  <button class="btn btn-primary form-control button-summary button2-summary" onclick="send_data()" >summarize
+                  </button>
+                </div>
+              </div>
+            </form>        <!-- </div> -->
+        </div>
+      </section>
+    </section>
+    
+
+  </div>
+</body>
+<script src="static/index.js"></script>
+<script src="static/script.js"></script>
+<script type="text/javascript">
+  function disapper()
+  {
+    
+  setTimeout(() => {
+  let get = document.getElementById('element');
+  get.style.visibility = 'hidden';
+  }, 50);
+}
+  </script>
+
+</html>

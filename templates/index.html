@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STM-19 Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="static/styles.css" />
+
+  <script src="https://kit.fontawesome.com/76995abe43.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/x-icon" href="static/photos/logo2.png">
+
+</head>
+
+<body>
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-nav">
+        <div class="container-fluid">
+          <img src="static/photos/logo2.png" alt="logo" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#how-works">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#functions">Functions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#uses">Users</a>
+              </li>
+            </ul>
+
+            <span class="login-text navbar-text">
+              <ul class="log navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <form action="{{ url_for("page6")}}">
+                    <button type="button" class="login-bottom btn btn-outline-light btn-lg download-button"
+                   onclick="this.parentNode.submit();" >
+                   Login
+                    </button>
+                </li>
+              </form>
+              <form action="{{ url_for("page5")}}">
+              <button type="button" class="login-bottom btn btn-outline-light btn-lg download-button"
+             onclick="this.parentNode.submit();" >
+             Signup
+              </button>
+                </li>
+        
+              </ul>
+              <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                    <h1>Login</h1></div>
+                    <div class="col-lg-6">
+                    <button type="button" class="close-cross" onclick="closeForm()">X</button></div>
+                    </div>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+    
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+    
+                    <a href="sidebar.html"><button type="submit" class="btn">Login</button></a>
+                    <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+                </form>
+              </div>
+
+              
+              
+            </span>
+
+          </div>
+        </div>
+      </nav>
+      <!-- Title -->
+      <div class="row display">
+        <div class="col-lg-6">
+          <h1 class="heading-text">
+            Summarize your meeting in easy steps!!
+          </h1>
+          <a download href="../static/ex/STM-19.zip">
+            <button type="button" class="btn btn-outline-light btn-lg download-button">
+              Download the Extension
+            </button></a>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-img" src="static/photos/meeting2.png" alt="meeting img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="row">
+      <div class="feature-box-1 col-lg-6">
+        <img class="feature-img" src="static/photos/working5.png" alt="" />
+      </div>
+      <div class="feature-box col-lg-6">
+        <h1 class="feature-text">
+          By using this you can Summerize your online meetings and keep track
+          of your meetings!!
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-works">
+    <h2 class="works-heading">How it works</h2>
+
+    <div class="working-content">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="static/photos/working8.png" alt="meeting2" />
+        </div>
+        <div class="col-lg-6 content">
+          <h3>
+            First you have to load extension in your machine 
+after loading email box will pop up where user have to give thier email.
+          </h3>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-lg-6 content">
+          <h3>
+            Then on meeting interface you will see start button, click on start button it will start transcripting your meeting.
+          </h3>
+        </div>
+        <div class="col-lg-6">
+          <img src="static/photos/working9.png" alt="working1" />
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="static/photos/meeting2.png" alt="working1" />
+        </div>
+        <div class="col-lg-6 content">
+          <h3>
+            When user clicks on end call then summary with meeting details will be mailed to user!
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="functions">
+    <div class="row">
+      <div class="functions-box col-lg-4">
+        <h3 class="icon"><i class="fa-solid fa-user"></i></h3>
+        <h3 class="icon-title">Easy to use</h3>
+        <p class="icon-info">Easy to install, simple user interface, and provides user friendly experience!!</p>
+      </div>
+      <div class="functions-box col-lg-4">
+        <h3 class="icon"><i class="fa-solid fa-bullseye"></i></h3>
+        <h3 class="icon-title">Faster</h3> 
+        <p class="icon-info">Generates summary in minimal time and also gives meeting details</p>
+      </div>
+      <div class="functions-box col-lg-4">
+        <h3 class="icon"><i class="fa-solid fa-circle-check"></i></h3>
+        <h3 class="icon-title">Minimizes work</h3> 
+        <p class="icon-info">Now don't worry about meeting summary we will take care about it</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="uses">
+    <h2 class="uses-heading">What do users say?</h2>
+    <div class="row">
+      <div class="col-lg-4 card-other">
+        <div class="card mx-auto use-card">
+          <img src="static/photos/meeting2.png" class="card-img-top" alt="..." width="50px" />
+          <div class="card-body">
+            <p class="card-text">
+              "Any techinal job requires to take accurate notes for long stretches of time. This transcription function helps you always have a backup. It has saved countless hours of proofreading and freed your schedule for other projects!!!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4  card-middle">
+        <div class="card mx-auto use-card">
+          <img src="static/photos/working7.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              "This is one of the top best tools for life/productivity ever invented. Many rank it up there with Gmail and the microwave. Helps not to forget what you are supposed to do after the meeting and helps people who couldn't make it to the meeting catch up. That's why it is best tool for online meeting transcription!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 card-other">
+        <div class="card mx-auto use-card">
+          <img src="static/photos/working8.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              "It is perfect for research to be able to accurately capture what is said in the meeting. No information is being lost while we don't spend time on writing notes during meetings."
+
+            </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p class="footer-p">©Copyright 2023 STM-19 </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+
+        function openFormSignup() {
+          document.getElementById("myFormSignup").style.display = "block";
+        }
+        
+        function closeFormSignup() {
+          document.getElementById("myFormSignup").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

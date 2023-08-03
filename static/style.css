@@ -1,0 +1,362 @@
+body{
+  /* background-color: rgb(26, 76, 125); */
+
+  background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgba(5, 8, 114, 1) 0%, rgba(7, 3, 53, 1) 97.5%);
+
+  /* background: #4b6cb7;  
+  background: -webkit-linear-gradient(to right, #4b6cb7, #182848);  
+  background: linear-gradient(to right,#4b6cb7, #182848); */
+
+  /* background: #8E2DE2; 
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);  */
+
+  color: #fff;
+  height: 40.5rem;
+}
+:root {
+    --body-bg-color: #fff; 
+
+    --green: #5a97ec; /*background*/
+    --light-green: #9fc7ff; /*upper-layer-background*/
+
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: var(--body-bg-color);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: right;
+    height: 100vh;
+    width: auto;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 100vh;
+    background-color: var(--green);
+    /* background-color: #007991; */
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+  }
+  
+  .main {
+    width: calc(100% - 78px);
+    height: 100vh;
+    padding: 20px;
+    color: var(--text-color);
+    transition: all 0.2s;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--green);
+    /* background-color: #007991; */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1rem;
+    padding: 15px;
+    gap: 15px;
+    transition: all 0.2s;
+  }
+  
+  .icon:hover {
+    background-color: var(--light-green) !important;
+    /* background-color: #3066be; */
+    cursor: pointer;
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    transition: all 0.2s;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    gap: 10px;
+    transition: all 0.2s;
+  }
+  
+  .icon-logout {
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-green);
+    /* background-color: #3066be; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  
+  .icon-logout:hover {
+    background-color: var(--light-grey);
+    /* background-color: #39414d; */
+    cursor: pointer;
+  }
+  
+  .main h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .logout-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-green);
+    /* background-color: #3066be; */
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+  
+  .logout-container #logout-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+  
+  /* #user-container {
+    display: flex;
+    flex-direction: column;
+    gap: -5px;
+  }
+  
+  #user-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  #user-role {
+    font-size: 0.7rem;
+    font-weight: 400;
+  } */
+
+  
+/* my css   */
+
+div.content {
+  padding: 1% 5% 10% 6%;
+  font-size: 1.0rem;
+  ;
+
+}
+
+.box-1{
+  margin-left:22%;
+  height: 150px;
+  width: 800px;
+  border: solid 1.5px #000;
+  background-color: #aacdff;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.menu-icon{
+  background-color: var(--green);
+}
+.container
+{
+  background-color: aliceblue;
+  height:148px ;
+}
+.right {
+  padding: 15px;
+  align-content: center;
+  width: 800px;
+  height: 148px;
+  background: #fffc54;
+}
+.left {
+  padding: 15px;
+  padding-left: 27px;
+  background: #e3e3dc;
+  height: 148px;
+  width: 200px;
+  padding-top: 1.5cm;
+  text-align: center;
+}
+.box-1{
+  transition: transform 0.3s;
+  background-color: aqua;
+   /* Animation */
+}
+
+.box-1:hover {
+  transform: scale(1.07); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.c {
+  padding-top: 7.5px;
+  padding-left: 0.7cm;
+  float: left;
+  width:auto;
+  height:auto; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.r:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+button.download
+{
+  background-color: rgba(255, 176, 176, 0.774);
+}
+button.view
+{
+  background-color: rgba(54, 255, 47, 0.686);
+}
+button
+{
+  padding: 7.5px 16px;
+}
+.c1 {
+  padding-top:10px ;
+  padding-left: 0.2cm;
+  float: left;
+  width: 3cm;
+  height: 30px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.r1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.element1
+{ background-color: #a5ff86;
+  border-radius: 5px;
+  width:220px;
+  padding: 4px 4px 4px 6px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+textarea{
+  width: 100%;
+  height: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* ::-webkit-input-placeholder {
+  text-align: center;
+} */
+
+/* #text{
+  padding-bottom: 400px;
+} */
+
+.button-summary {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 44%;
+}
+
+.button2-summary {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2-summary:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.view {
+  border: none;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5%;
+  /* margin-left: 44%; */
+}
+
+.view {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.view:hover{
+  background-color: #020202;
+  color: white;
+}
+
+.download {
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 44%;
+  border-radius: 5%;
+
+}
+
+.download {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.download:hover{
+  background-color: #020202;
+  color: white;
+}
